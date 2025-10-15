@@ -240,6 +240,17 @@ article.active {
 }
 
 .article-title {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 调整图标和文字之间的间距 */
+}
+
+.article-title .icon-box {
+  display: flex;
+  align-items: center;
+}
+
+.article-title {
   position: relative;
   padding-bottom: 7px;
 }
@@ -290,6 +301,91 @@ article.active {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+}
+
+.tag-box {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px; /* 药丸形状 */
+  font-size: 14px;
+  color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.tag-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.tag-box ion-icon { 
+  --ionicon-stroke-width: 35px;
+  font-size: 16px;
+}
+
+.tag-box:hover {
+  background: var(--bg-gradient-yellow-1);
+  transform: translateY(-2px);
+}
+
+.tag-box:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
+
+/* 不同尺寸的tag-box */
+.tag-box.small {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 16px;
+}
+
+.tag-box.large {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 24px;
+}
+
+/* 不同颜色主题的tag-box */
+.tag-box.primary {
+  color: var(--orange-yellow-crayola);
+}
+
+.tag-box.secondary {
+  color: var(--light-gray);
+}
+
+.tag-box.accent {
+  color: var(--vegas-gold);
+}
+
+/* 仅包含图标的tag-box */
+.tag-box.icon-only {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 18px;
+}
+
+.tag-box.icon-only.small {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+}
+
+.tag-box.icon-only.large {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
 }
 
 
