@@ -109,6 +109,12 @@ audio {
     text-shadow: 0 0 8px #fff;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.love_you p {
+    margin: 0.3em 0;
+    line-height: 1.5;
 }
 
 #lovexf {
@@ -137,7 +143,7 @@ audio {
 .time_counter {
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 80%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: 1000;
@@ -162,13 +168,17 @@ audio {
 /* 移动端响应式优化 */
 @media screen and (max-width: 768px) {
     .love_you {
-        font-size: 1.8rem;
-        top: 40%;
+        font-size: 1.4rem;
+        top: 38%;
+    }
+    
+    .love_you p {
+        margin: 0.2em 0;
     }
     
     .time_counter {
         font-size: 0.85rem;
-        top: 55%;
+        top: 58%;
         white-space: nowrap;
     }
     
@@ -179,13 +189,17 @@ audio {
 
 @media screen and (max-width: 480px) {
     .love_you {
-        font-size: 1.5rem;
-        top: 35%;
+        font-size: 1.1rem;
+        top: 32%;
+    }
+    
+    .love_you p {
+        margin: 0.15em 0;
     }
     
     .time_counter {
         font-size: 0.7rem;
-        top: 48%;
+        top: 52%;
     }
     
     .time_counter span {
@@ -201,12 +215,17 @@ audio {
 
 @media screen and (max-width: 360px) {
     .love_you {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
+        top: 30%;
+    }
+    
+    .love_you p {
+        margin: 0.1em 0;
     }
     
     .time_counter {
-        font-size: 0.6rem;
-        top: 46%;
+        font-size: 0.55rem;
+        top: 48%;
     }
     
     .time_counter span {
