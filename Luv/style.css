@@ -4,29 +4,89 @@
 }
 
 body {
-    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dec470b0-fed6-46e5-be53-ec85fadc01be/b3997a29-3506-4fa5-9a54-57b967b1990a.webp) no-repeat center center;
-    background-size: cover;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 照片墙背景 */
+.photo-wall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    gap: 2px;
+    padding: 0;
+}
+
+/* Create six equal columns that sits next to each other */
+.column {
+    flex: 1;
+    min-width: 16.66%;
+    max-width: 16.66%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.column img {
+    vertical-align: middle;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+/* Responsive layout - makes a three column-layout instead of six columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 
 body::after {
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    -webkit-background-color: rgba(0, 0, 0, .5);
     background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+    pointer-events: none;
 }
 
 audio,
 .love_you {
     position: absolute;
     left: 50%;
+    z-index: 1000;
+}
+
+audio {
     top: 1.5rem;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    z-index: 1809185784;
 }
 
 .love_you {
@@ -42,6 +102,8 @@ audio,
     user-select: none;
     -webkit-text-shadow: 0 0 8px #fff;
     text-shadow: 0 0 8px #fff;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 #lovexf {
@@ -63,4 +125,29 @@ audio,
         filter: blur(0);
         letter-spacing: .05rem;
     }
+}
+
+.time_counter {
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffc0cb;
+    letter-spacing: .05rem;
+    -moz-animation: love-xf 1.2s alternate ease-in-out;
+    -webkit-animation: love-xf 1.2s alternate ease-in-out;
+    animation: love-xf 1.2s alternate ease-in-out;
+    user-select: none;
+    -webkit-text-shadow: 0 0 8px #fff;
+    text-shadow: 0 0 8px #fff;
+}
+
+.time_counter span {
+    font-size: 1.3rem;
+    font-weight: bolder;
 }
