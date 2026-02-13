@@ -57,9 +57,14 @@ body {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
+    .row {
+        gap: 1px;
+    }
+    
     .column {
-        flex: 100%;
-        max-width: 100%;
+        flex: 33.33%;
+        max-width: 33.33%;
+        gap: 1px;
     }
 }
 
@@ -111,6 +116,8 @@ audio {
     width: 100%;
     height: 100%;
     z-index: 520;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 @keyframes love-xf {
@@ -130,7 +137,7 @@ audio {
 .time_counter {
     position: absolute;
     left: 50%;
-    top: 72%;
+    top: 75%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: 1000;
@@ -150,4 +157,59 @@ audio {
 .time_counter span {
     font-size: 1.3rem;
     font-weight: bolder;
+}
+
+/* 移动端响应式优化 */
+@media screen and (max-width: 768px) {
+    .love_you {
+        font-size: 1.8rem;
+        top: 40%;
+    }
+    
+    .time_counter {
+        font-size: 0.85rem;
+        top: 55%;
+        white-space: nowrap;
+    }
+    
+    .time_counter span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .love_you {
+        font-size: 1.5rem;
+        top: 35%;
+    }
+    
+    .time_counter {
+        font-size: 0.7rem;
+        top: 48%;
+    }
+    
+    .time_counter span {
+        font-size: 0.9rem;
+    }
+    
+    /* 调整照片墙为3列 */
+    .column {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .love_you {
+        font-size: 1.2rem;
+    }
+    
+    .time_counter {
+        font-size: 0.6rem;
+        top: 46%;
+    }
+    
+    .time_counter span {
+        font-size: 0.75rem;
+    }
 }

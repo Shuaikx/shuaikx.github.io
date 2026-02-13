@@ -1,10 +1,15 @@
+// 根据屏幕尺寸调整粒子设置
+var isMobile = window.innerWidth <= 768;
+var particleCount = isMobile ? 300 : 500;
+var particleSize = isMobile ? 20 : 28;
+
 var settings = {
     particles: {
-        length: 500, // maximum amount of particles
+        length: particleCount, // maximum amount of particles
         duration: 2, // particle duration in sec
         velocity: 100, // particle velocity in pixels/sec
         effect: -0.6, // play with this for a nice effect
-        size: 28, // particle size in pixels
+        size: particleSize, // particle size in pixels
     },
 };
 
