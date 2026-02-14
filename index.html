@@ -33,6 +33,123 @@
 
     gtag('config', 'G-SZB66KPBC1');
   </script>
+
+  <!-- 情人节弹窗样式 -->
+  <style>
+    .valentine-modal {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .valentine-modal.hidden {
+      display: none;
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #ff69b4;
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 0 0 60px rgba(255, 105, 180, 0.3);
+      animation: scaleIn 0.5s ease-in-out;
+      max-width: 90%;
+      width: 400px;
+    }
+
+    .modal-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffc0cb;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 0 10px rgba(255, 192, 203, 0.8);
+      letter-spacing: 0.05rem;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .modal-btn {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.8rem 2rem;
+      border: 2px solid #ff69b4;
+      border-radius: 10px;
+      background: transparent;
+      color: #ffc0cb;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-shadow: 0 0 5px rgba(255, 192, 203, 0.5);
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    }
+
+    .modal-btn:hover {
+      background: #ff69b4;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+      transform: translateY(-2px);
+    }
+
+    .modal-btn:active {
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .modal-content {
+        padding: 2rem 1.5rem;
+        width: 320px;
+      }
+
+      .modal-title {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+
+      .modal-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+      }
+
+      .modal-buttons {
+        gap: 1rem;
+      }
+    }
+  </style>
+  <!-- 情人节弹窗样式 -->
 </head>
 
 <body>
@@ -1057,6 +1174,54 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- 情人节弹窗 -->
+  <div id="valentineModal" class="valentine-modal hidden">
+    <div class="modal-content">
+      <h2 class="modal-title">Are you celebrating Valentine's Day today?</h2>
+      <div class="modal-buttons">
+        <button class="modal-btn" id="btnYes">Yes</button>
+        <button class="modal-btn" id="btnNo">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 情人节弹窗逻辑
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('valentineModal');
+      const btnYes = document.getElementById('btnYes');
+      const btnNo = document.getElementById('btnNo');
+      let autoCloseTimer = null;
+
+      // 3秒后显示弹窗
+      setTimeout(function() {
+        modal.classList.remove('hidden');
+        
+        // 弹窗显示后，启动10秒自动关闭定时器
+        autoCloseTimer = setTimeout(function() {
+          modal.classList.add('hidden');
+        }, 10000);
+      }, 3000);
+
+      // 点击"过"按钮 - 跳转到 Luv/index.html
+      btnYes.addEventListener('click', function() {
+        if (autoCloseTimer) {
+          clearTimeout(autoCloseTimer);
+        }
+        window.location.href = 'Luv/index.html';
+      });
+
+      // 点击"不过"按钮 - 关闭弹窗
+      btnNo.addEventListener('click', function() {
+        if (autoCloseTimer) {
+          clearTimeout(autoCloseTimer);
+        }
+        modal.classList.add('hidden');
+      });
+    });
+  </script>
+<!-- 情人节弹窗 -->
 
 </body>
 
