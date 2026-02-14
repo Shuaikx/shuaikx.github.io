@@ -209,7 +209,7 @@ audio {
 @media screen and (max-width: 768px) {
     .love_you {
         font-size: 1.4rem;
-        top: 42%;
+        top: 55%;
     }
     
     .love_you p {
@@ -217,8 +217,8 @@ audio {
     }
     
     .time_counter {
-        font-size: 0.85rem;
-        top: 58%;
+        font-size: 1rem;
+        top: 60%;
         white-space: nowrap;
     }
     
