@@ -21,6 +21,11 @@ body {
     background-color: #000;
 }
 
+/* 鼠标悬停时暂停滚动 */
+.photo-wall:hover .column {
+    animation-play-state: paused;
+}
+
 .row {
     display: flex;
     flex-wrap: nowrap;
@@ -38,6 +43,41 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    animation: scroll-up 30s linear infinite;
+}
+
+/* 为每列设置不同的动画速度 */
+.column:nth-child(1) {
+    animation-duration: 35s;
+}
+
+.column:nth-child(2) {
+    animation-duration: 30s;
+}
+
+.column:nth-child(3) {
+    animation-duration: 40s;
+}
+
+.column:nth-child(4) {
+    animation-duration: 32s;
+}
+
+.column:nth-child(5) {
+    animation-duration: 38s;
+}
+
+.column:nth-child(6) {
+    animation-duration: 36s;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
 }
 
 .column img {
@@ -169,7 +209,7 @@ audio {
 @media screen and (max-width: 768px) {
     .love_you {
         font-size: 1.4rem;
-        top: 38%;
+        top: 42%;
     }
     
     .love_you p {
