@@ -886,7 +886,40 @@ main {
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
+.project-item {
+  display: none;
+  position: relative;
+  background: var(--border-gradient-onyx);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.project-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-item:hover {
+  background: var(--bg-gradient-yellow-1);
+  transform: translateY(-2px);
+}
+
+.project-item:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
 
 .project-item.active {
   display: block;

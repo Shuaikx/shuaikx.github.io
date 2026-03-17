@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
@@ -12,20 +12,219 @@
         rel="stylesheet">
 
   <link rel="stylesheet" href="/Portfolio/static/css/bulma.min.css">
-  <link rel="stylesheet" href="/Portfolio/static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="/Portfolio/static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="/Portfolio/static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="/Portfolio/static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    :root {
+      --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+      --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+      --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
+      --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+      --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+      --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+      --eerie-black-1: hsl(240, 2%, 13%);
+      --eerie-black-2: hsl(240, 2%, 12%);
+      --smoky-black: hsl(0, 0%, 7%);
+      --white-2: hsl(0, 0%, 98%);
+      --light-gray: hsl(0, 0%, 84%);
+      --light-gray-70: hsla(0, 0%, 84%, 0.7);
+      --orange-yellow-crayola: hsl(45, 100%, 72%);
+      --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+      --reading-max: 72ch;
+      --content-left-offset: 22px;
+    }
+
+    body {
+      font-family: 'Poppins', 'Noto Sans', sans-serif;
+      background: radial-gradient(circle at top right, hsl(216, 25%, 14%) 0%, var(--smoky-black) 45%);
+      color: var(--light-gray);
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: transparent;
+      padding: 0 14px;
+    }
+
+    .page-panel {
+      max-width: 1080px;
+      margin: 20px auto;
+      background: var(--border-gradient-onyx);
+      border-radius: 20px;
+      box-shadow: var(--shadow-1);
+      position: relative;
+      z-index: 1;
+      padding: 14px 0 24px;
+    }
+
+    .page-panel::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background: var(--bg-gradient-jet);
+      border-radius: inherit;
+      z-index: -1;
+    }
+
+    .hero-body {
+      margin: 0;
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .publication-title,
+    .title,
+    .content h2,
+    .content h3 {
+      color: var(--white-2) !important;
+    }
+
+    .publication-title {
+      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+      font-size: clamp(2rem, 2.2vw + 1rem, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 20px !important;
+      margin-left: var(--content-left-offset);
+    }
+
+    .publication-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--text-gradient-yellow);
+    }
+
+    .publication-authors,
+    .content p {
+      color: var(--light-gray);
+    }
+
+    .publication-authors {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .column.is-8 {
+      width: min(100%, 960px);
+    }
+
+    .content {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: clamp(1.05rem, 0.35vw + 0.95rem, 1.18rem);
+      line-height: 1.72;
+      letter-spacing: 0.005em;
+      text-wrap: pretty;
+      padding-left: var(--content-left-offset);
+    }
+
+    .content .title.is-3,
+    .column.is-8 > .title.is-3 {
+      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+      font-size: clamp(1.9rem, 1vw + 1.1rem, 2.35rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .content .title.is-3 {
+      margin-left: 0;
+    }
+
+    .column.is-8 > .title.is-3 {
+      margin-left: var(--content-left-offset);
+    }
+
+    .section-divider {
+      height: 1px;
+      background: hsla(0, 0%, 100%, 0.26);
+      margin: 28px var(--content-left-offset) 8px;
+    }
+
+    .content p {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 1.05em;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .publication-authors a,
+    .content a,
+    .footer a {
+      color: var(--orange-yellow-crayola) !important;
+      text-decoration: none;
+    }
+
+    .image-grid {
+      margin: 10px auto;
+      margin-left: var(--content-left-offset);
+      max-width: 980px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .image-card {
+      border: 1px solid hsl(0, 0%, 24%);
+      border-radius: 16px;
+      background: linear-gradient(160deg, hsl(240, 2%, 18%), hsl(240, 2%, 13%));
+      padding: 8px;
+    }
+
+    .image-card img {
+      border-radius: 12px;
+      display: block;
+      width: 100%;
+    }
+
+    .footer {
+      background: transparent;
+      color: var(--light-gray-70);
+      padding-top: 0;
+      padding-bottom: 28px;
+    }
+
+    .footer .content {
+      background: var(--border-gradient-onyx);
+      border-radius: 16px;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer .content::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background: var(--eerie-black-1);
+      z-index: -1;
+    }
+  </style>
+
   <script defer src="/Portfolio/static/js/fontawesome.all.min.js"></script>
-  <script src="/Portfolio/static/js/bulma-carousel.min.js"></script>
-  <script src="/Portfolio/static/js/bulma-slider.min.js"></script>
-  <script src="/Portfolio/static/js/index.js"></script>
 </head>
 <body>
+
+<main class="page-panel">
 
 
 <section class="hero">
@@ -34,11 +233,6 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Shopping Mini-Program in Wechat</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://shuaikx.github.io/" target="_blank">Kexiang Shuai</a>
-            </span>
-          </div>
         </div>
       </div>
     </div>
@@ -60,6 +254,7 @@
           </div>
         </div>
       </div>
+      <div class="section-divider"></div>
     </div>
     <!--/ Abstract. -->
   </div>  
@@ -88,53 +283,18 @@
         </div>
       </div>  
     </div>
-    <br/>
-      <div id="results-carousel" class="carousel results-carousel" style="border-width:0px;">
-        
-        <div class="item item-steve" style="border-width:0px;">
-          <div class="columns is-centered" style="border-width:0px;">
-            <img poster="" id="steve"  src="./images/pic1.png" width="80%"/>
-          </div>
-        </div>
-        
-        <div class="item item-shiba" style="border-width:0px;">
-          <div class="columns is-centered" style="border-width:0px;">
-            <img poster="" id="shiba" src="./images/pic2.png"width="80%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic3.png" width="80%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic4.png" width="80%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic5.png" width="80%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic6.png" width="80%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic7.png" width="80%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic8.png" width="80%">
-          </div>
-        </div>
+      <div class="image-grid">
+        <div class="image-card"><img src="./images/pic1.png" alt="User feature screenshot 1"></div>
+        <div class="image-card"><img src="./images/pic2.png" alt="User feature screenshot 2"></div>
+        <div class="image-card"><img src="./images/pic3.png" alt="User feature screenshot 3"></div>
+        <div class="image-card"><img src="./images/pic4.png" alt="User feature screenshot 4"></div>
+        <div class="image-card"><img src="./images/pic5.png" alt="User feature screenshot 5"></div>
+        <div class="image-card"><img src="./images/pic6.png" alt="User feature screenshot 6"></div>
+        <div class="image-card"><img src="./images/pic7.png" alt="User feature screenshot 7"></div>
+        <div class="image-card"><img src="./images/pic8.png" alt="User feature screenshot 8"></div>
       </div>
-    <br/>
   </div>
+  <div class="section-divider"></div>
   
 </section>
 
@@ -162,53 +322,16 @@
         </div>
       </div>  
     </div>
-    <br/>
-      <div id="results-carousel" class="carousel results-carousel" style="border-width:0px;">
-        
-        <div class="item item-steve" style="border-width:0px;">
-          <div class="columns is-centered" style="border-width:0px;">
-            <img poster="" id="steve"  src="./images/pic9.png" width="100%"/>
-          </div>
-        </div>
-        
-        <div class="item item-shiba" style="border-width:0px;">
-          <div class="columns is-centered" style="border-width:0px;">
-            <img poster="" id="shiba" src="./images/pic10.png"width="100%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic11.png" width="100%">
-          </div>
-        </div>
-        <div class="item item-chair-tp" style="border-width:0px;">
-          <div class="item" style="border-width:0px;">
-            <img poster="" id="chair-tp"  src="./images/pic12.png" width="100%">
-          </div>
-        </div>
-        
+      <div class="image-grid">
+        <div class="image-card"><img src="./images/pic9.png" alt="Merchant feature screenshot 1"></div>
+        <div class="image-card"><img src="./images/pic10.png" alt="Merchant feature screenshot 2"></div>
+        <div class="image-card"><img src="./images/pic11.png" alt="Merchant feature screenshot 3"></div>
+        <div class="image-card"><img src="./images/pic12.png" alt="Merchant feature screenshot 4"></div>
       </div>
-    <br/>
   </div>
-  
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is built on top of the original<a
-            href="https://github.com/xr-objects/xr-objects.github.io">  XR-Objects, <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 </a> International License.
-          </p>
-          </div>
-      </div>
-    </div>
-  </div>
-</footer>
+</main>
 
 </body>
 </html>
