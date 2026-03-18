@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="AR Computer Assembly Tutorial">
+    content="AR Computer Assembly Tutorial">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AR Computer Assembly Tutorial</title>
@@ -11,246 +11,33 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="../static/css/bulma.min.css">
-  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  
-<style>
-    :root {
-      --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
-      --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
-      --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
-      --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
-      --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
-      --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
-      --eerie-black-1: hsl(240, 2%, 13%);
-      --eerie-black-2: hsl(240, 2%, 12%);
-      --smoky-black: hsl(0, 0%, 7%);
-      --white-2: hsl(0, 0%, 98%);
-      --light-gray: hsl(0, 0%, 84%);
-      --light-gray-70: hsla(0, 0%, 84%, 0.7);
-      --orange-yellow-crayola: hsl(45, 100%, 72%);
-      --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-      --reading-max: 72ch;
-      --content-left-offset: 22px;
-    }
-
-    body {
-      font-family: 'Poppins', 'Noto Sans', sans-serif;
-      background: radial-gradient(circle at top right, hsl(216, 25%, 14%) 0%, var(--smoky-black) 45%);
-      color: var(--light-gray);
-      min-height: 100vh;
-    }
-
-    .hero {
-      background: transparent;
-      padding: 0 14px;
-    }
-
-    .page-panel {
-      max-width: 1080px;
-      margin: 20px auto;
-      background: var(--border-gradient-onyx);
-      border-radius: 20px;
-      box-shadow: var(--shadow-1);
-      position: relative;
-      z-index: 1;
-      padding: 14px 0 24px;
-    }
-
-    .page-panel::before {
-      content: "";
-      position: absolute;
-      inset: 1px;
-      background: var(--bg-gradient-jet);
-      border-radius: inherit;
-      z-index: -1;
-    }
-
-    .hero-body {
-      margin: 0;
-      background: transparent;
-      border-radius: 0;
-      box-shadow: none;
-    }
-
-    .publication-title,
-    .title,
-    .content h2,
-    .content h3 {
-      color: var(--white-2) !important;
-    }
-
-    .publication-title {
-      font-family: 'Google Sans', 'Noto Sans', sans-serif;
-      font-size: clamp(2rem, 2.2vw + 1rem, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 10px;
-      margin-bottom: 20px !important;
-      margin-left: var(--content-left-offset);
-    }
-
-    .publication-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 3px;
-      border-radius: 3px;
-      background: var(--text-gradient-yellow);
-    }
-
-    .publication-authors,
-    .content p {
-      color: var(--light-gray);
-    }
-
-    .publication-authors {
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .column.is-8 {
-      width: min(100%, 960px);
-    }
-
-    .content {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: clamp(1.05rem, 0.35vw + 0.95rem, 1.18rem);
-      line-height: 1.72;
-      letter-spacing: 0.005em;
-      text-wrap: pretty;
-      padding-left: var(--content-left-offset);
-    }
-
-    .content .title.is-3,
-    .column.is-8 > .title.is-3 {
-      font-family: 'Google Sans', 'Noto Sans', sans-serif;
-      font-size: clamp(1.9rem, 1vw + 1.1rem, 2.35rem);
-      font-weight: 700;
-      letter-spacing: -0.015em;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-
-    .content .title.is-3 {
-      margin-left: 0;
-    }
-
-    .column.is-8 > .title.is-3 {
-      margin-left: var(--content-left-offset);
-    }
-
-    .section-divider {
-      height: 1px;
-      background: hsla(0, 0%, 100%, 0.26);
-      margin: 28px var(--content-left-offset) 8px;
-    }
-
-    .content p {
-      max-width: none;
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 1.05em;
-    }
-
-    .content p:last-child {
-      margin-bottom: 0;
-    }
-
-    .publication-authors a,
-    .content a,
-    .footer a {
-      color: var(--orange-yellow-crayola) !important;
-      text-decoration: none;
-    }
-
-    .image-grid {
-      margin: 10px auto;
-      margin-left: var(--content-left-offset);
-      max-width: 980px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    .image-card {
-      border: 1px solid hsl(0, 0%, 24%);
-      border-radius: 16px;
-      background: linear-gradient(160deg, hsl(240, 2%, 18%), hsl(240, 2%, 13%));
-      padding: 8px;
-    }
-
-    .image-card img {
-      border-radius: 12px;
-      display: block;
-      width: 100%;
-    }
-
-    .footer {
-      background: transparent;
-      color: var(--light-gray-70);
-      padding-top: 0;
-      padding-bottom: 28px;
-    }
-
-    .footer .content {
-      background: var(--border-gradient-onyx);
-      border-radius: 16px;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer .content::before {
-      content: "";
-      position: absolute;
-      inset: 1px;
-      border-radius: inherit;
-      background: var(--eerie-black-1);
-      z-index: -1;
-    }
-  </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="../static/js/fontawesome.all.min.js"></script>
-  <script src="../static/js/bulma-carousel.min.js"></script>
-  <script src="../static/js/bulma-slider.min.js"></script>
-  <script src="../static/js/index.js"></script>
+  <link rel="stylesheet" href="../static/css/portfolio-page.css">
 </head>
 <body>
 
 <main class="page-panel">
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AR Computer Assembly Tutorial</h1>
+  <section class="page-section">
+    <div class="page-container">
+      <div class="page-row">
+        <div class="page-col">
+          <h1 class="publication-title">AR Computer Assembly Tutorial</h1>
         </div>
       </div>
+      <div class="section-divider"></div>
     </div>
-  
+  </section>
 
-    <div class="container">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-8">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
+  <section class="page-section">
+    <div class="page-container">
+      <div class="page-row">
+        <div class="page-col">
+          <div class="section-content section-content--justified">
+            <h2 class="section-title">Abstract</h2>
             <p>
-              We present an innovative application leveraging Augmented Reality (AR) technology to simplify the PC assembly process. 
-              With the growing demand for custom-built PCs in a booming market, assembling a computer remains a challenging task for many users. 
-              This app transforms traditional assembly guides into immersive AR simulations, providing users with an intuitive and interactive virtual assistant. 
+              We present an innovative application leveraging Augmented Reality (AR) technology to simplify the PC assembly process.
+              With the growing demand for custom-built PCs in a booming market, assembling a computer remains a challenging task for many users.
+              This app transforms traditional assembly guides into immersive AR simulations, providing users with an intuitive and interactive virtual assistant.
               Designed to empower non-professional users, it enables them to independently complete the complex task of building a PC with ease.
             </p>
           </div>
@@ -258,98 +45,100 @@
       </div>
       <div class="section-divider"></div>
     </div>
-    <!--/ Abstract. -->
-  </div>  
-</section>
+  </section>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <h2 class="title is-3">Background</h2>
+  <section class="page-section">
+    <div class="page-container">
+      <div class="page-row">
+        <div class="page-col">
+          <div class="section-content">
+            <h2 class="section-title">Background</h2>
             <p>
-              The PC assembly process is a complex and error-prone task that requires detailed technical knowledge. 
-              This AR-based tutorial application simplifies the assembly workflow by providing step-by-step visual guidance. 
-              Users can view 3D AR models of components overlaid on their physical desktop environment, making it easy to identify parts and understand their correct placement. 
+              The PC assembly process is a complex and error-prone task that requires detailed technical knowledge.
+              This AR-based tutorial application simplifies the assembly workflow by providing step-by-step visual guidance.
+              Users can view 3D AR models of components overlaid on their physical desktop environment, making it easy to identify parts and understand their correct placement.
               The application includes detailed instructions for each assembly step, helping users avoid common mistakes and assembly errors.
             </p>
             <p>
-              By leveraging Augmented Reality technology, the tutorial becomes an interactive and engaging learning experience. 
-              Users can rotate and manipulate virtual components in their real environment, gaining a better understanding of how different parts fit together. 
+              By leveraging Augmented Reality technology, the tutorial becomes an interactive and engaging learning experience.
+              Users can rotate and manipulate virtual components in their real environment, gaining a better understanding of how different parts fit together.
               This innovative approach transforms a challenging task into an accessible and intuitive process for both beginners and experienced builders.
             </p>
           </div>
         </div>
-      </div>  
-    </div>
-      <div class="image-grid">
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic1.png" alt="Background screenshot 1"></div>
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic2.png" alt="Background screenshot 2"></div>
       </div>
-  </div>
-  <div class="section-divider"></div>
-</section>
+      <div class="section-divider"></div>
+    </div>
+  </section>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <h2 class="title is-3">Functions and Implementation</h2>
+  <section class="page-section">
+    <div class="page-container">
+      <div class="page-row">
+        <div class="page-col">
+          <div class="section-content">
+            <h2 class="section-title">Functions and Implementation</h2>
             <p>
-              The AR assembly tutorial features several key functionalities designed to enhance the user experience. 
-              Real-time AR visualization allows users to see exactly where each component should be placed within their own workspace. 
+              The AR assembly tutorial features several key functionalities designed to enhance the user experience.
+              Real-time AR visualization allows users to see exactly where each component should be placed within their own workspace.
               The application uses advanced computer vision to track the user's work area and overlay digital models onto physical components with high precision.
             </p>
             <p>
-              Additional features include step-by-step progress tracking, which helps users understand their completion status and navigate through the assembly process. 
-              Interactive hints and warnings are provided for critical steps to prevent assembly errors. 
+              Additional features include step-by-step progress tracking, which helps users understand their completion status and navigate through the assembly process.
+              Interactive hints and warnings are provided for critical steps to prevent assembly errors.
               The application also includes a parts inventory system that helps users verify they have all necessary components before starting the assembly.
             </p>
           </div>
         </div>
-      </div>  
-    </div>
-      <div class="image-grid">
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic3.png" alt="Implementation screenshot 1"></div>
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic4.png" alt="Implementation screenshot 2"></div>
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic5.png" alt="Implementation screenshot 3"></div>
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic8.png" alt="Implementation screenshot 4"></div>
       </div>
-  </div>
-  <div class="section-divider"></div>
-</section>
+      <div class="section-divider"></div>
+    </div>
+  </section>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <h2 class="title is-3">Prospects and Practicability</h2>
+  <section class="page-section">
+    <div class="page-container">
+      <div class="page-row">
+        <div class="page-col">
+          <div class="section-content">
+            <h2 class="section-title">Prospects and Practicability</h2>
             <p>
-              The AR assembly tutorial demonstrates significant potential for commercial applications beyond PC assembly. 
-              The technology can be extended to support assembly of various complex products, including furniture, appliances, automotive components, and electronics. 
+              The AR assembly tutorial demonstrates significant potential for commercial applications beyond PC assembly.
+              The technology can be extended to support assembly of various complex products, including furniture, appliances, automotive components, and electronics.
               Educational institutions can leverage this application to teach technical skills in an engaging and interactive manner.
             </p>
             <p>
-              The practicability of this solution is high due to the widespread availability of AR-capable devices including smartphones and tablets. 
-              Manufacturers can provide AR assembly guides as part of their product documentation, significantly reducing support costs and customer frustration. 
+              The practicability of this solution is high due to the widespread availability of AR-capable devices including smartphones and tablets.
+              Manufacturers can provide AR assembly guides as part of their product documentation, significantly reducing support costs and customer frustration.
               As AR technology continues to improve and become more accessible, such solutions will become increasingly valuable across multiple industries.
             </p>
           </div>
         </div>
-      </div>  
-    </div>
-      <div class="image-grid">
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic6.png" alt="Prospects screenshot 1"></div>
+      </div>
+      <div class="image-grid image-grid--full">
         <div class="image-card"><img src="./images/pic9.png" alt="Prospects screenshot 2"></div>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
 </main>
 
