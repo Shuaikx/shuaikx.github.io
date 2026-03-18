@@ -1,0 +1,202 @@
+:root {
+  --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+  --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-2: hsl(0, 0%, 98%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --reading-max: 72ch;
+  --content-left-offset: 22px;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Noto Sans', sans-serif;
+  background: radial-gradient(circle at top right, hsl(216, 25%, 14%) 0%, var(--smoky-black) 45%);
+  color: var(--light-gray);
+  min-height: 100vh;
+}
+
+.hero {
+  background: transparent;
+  padding: 0 14px;
+}
+
+.page-panel {
+  max-width: 1080px;
+  margin: 20px auto;
+  background: var(--border-gradient-onyx);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  position: relative;
+  z-index: 1;
+  padding: 14px 0 24px;
+}
+
+.page-panel::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.hero-body {
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.publication-title,
+.title,
+.content h2,
+.content h3 {
+  color: var(--white-2) !important;
+}
+
+.publication-title {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: clamp(2rem, 2.2vw + 1rem, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 20px !important;
+  margin-left: var(--content-left-offset);
+}
+
+.publication-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--text-gradient-yellow);
+}
+
+.publication-authors,
+.content p {
+  color: var(--light-gray);
+}
+
+.publication-authors {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.column.is-8 {
+  width: min(100%, 960px);
+}
+
+.content {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: clamp(1.05rem, 0.35vw + 0.95rem, 1.18rem);
+  line-height: 1.72;
+  letter-spacing: 0.005em;
+  text-wrap: pretty;
+  padding-left: var(--content-left-offset);
+}
+
+.content .title.is-3,
+.column.is-8 > .title.is-3 {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: clamp(1.9rem, 1vw + 1.1rem, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.content .title.is-3 {
+  margin-left: 0;
+}
+
+.column.is-8 > .title.is-3 {
+  margin-left: var(--content-left-offset);
+}
+
+.section-divider {
+  height: 1px;
+  background: hsla(0, 0%, 100%, 0.26);
+  margin: 28px var(--content-left-offset) 8px;
+}
+
+.content p {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1.05em;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.publication-authors a,
+.content a,
+.footer a {
+  color: var(--orange-yellow-crayola) !important;
+  text-decoration: none;
+}
+
+.image-grid {
+  margin: 10px auto;
+  margin-left: var(--content-left-offset);
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.image-card {
+  border: 1px solid hsl(0, 0%, 24%);
+  border-radius: 16px;
+  background: linear-gradient(160deg, hsl(240, 2%, 18%), hsl(240, 2%, 13%));
+  padding: 8px;
+}
+
+.image-card img {
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  background: transparent;
+  color: var(--light-gray-70);
+  padding-top: 0;
+  padding-bottom: 28px;
+}
+
+.footer .content {
+  background: var(--border-gradient-onyx);
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer .content::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--eerie-black-1);
+  z-index: -1;
+}
