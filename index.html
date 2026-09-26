@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KX-Shuai-Web</title>
+  <meta name="description" content="KX Shuai's game client development, XR projects, and resume.">
 
   <link rel="shortcut icon" href="./assets/images/loopy.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -69,7 +70,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="shuaikx828@gmail.com" class="contact-link">shuaikx828@gmail.com</a>
+              <a href="mailto:shuaikx828@gmail.com" class="contact-link">shuaikx828@gmail.com</a>
             </div>
 
           </li>
@@ -149,11 +150,19 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>Main</button>
+            <button class="navbar-link active" data-nav-link data-page-target="main">Main</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-page-target="resume">Resume</button>
+          </li>
+
+          <li class="navbar-item language-item">
+            <div class="language-switch" role="group" aria-label="Language / 语言">
+              <button type="button" class="language-option active" data-language="en" aria-pressed="true">EN</button>
+              <span aria-hidden="true">/</span>
+              <button type="button" class="language-option" data-language="zh" aria-pressed="false">中文</button>
+            </div>
           </li>
 
         </ul>
@@ -172,16 +181,13 @@
 
         <section class="about-text">
           <p>
-            Hi! I'm Kexiang (KX) Shuai, 
-            a developer specializing in Unity-based Game and XR applications. 
-            With an additional skillset in front-end web development and a track record of HCI publications, 
-            I bridge the gap between technical implementation and user experience.
+            Hi! I'm Kexiang (KX) Shuai, a game client and XR developer working with Unity.
+            My work spans gameplay systems, multiplayer spatial experiences, and tools that help teams build and debug more effectively.
           </p>
           <p>
-            Currently a Master's student at CMU’s Entertainment Technology Center (ETC), 
-            I am pivoting my focus toward Engine Tool Development and Multiplayer Networking. 
-            I am driven by the challenge of building impactful, 
-            user-centric systems within highly collaborative pipelines.
+            I'm pursuing a master's degree at Carnegie Mellon University's Entertainment Technology Center.
+            At Tencent Games' TiMi Studio Group, I worked on gameplay systems, Unity editor tools, and development workflows.
+            I also bring three years of HCI research experience from HER Lab.
           </p>
         </section>
 
@@ -192,7 +198,7 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title">What I do</h3>
 
           <ul class="service-list">
 
@@ -206,7 +212,7 @@
                 <h4 class="h4 service-item-title">Graduate Student at CMU</h4>
 
                 <p class="service-item-text">
-                  I'm pursuing my graduate studies at Carnegie Mellon's Entertainment Technology Center (ETC).          
+                  Pursuing a master's degree in Entertainment Technology at Carnegie Mellon University.
                 </p>
               </div>
 
@@ -222,7 +228,7 @@
                 <h4 class="h4 service-item-title">Unity Developer </h4>
 
                 <p class="service-item-text">
-                  I'm a Unity developer with various practical project experience, skilled in Gameplay Programming and XR Development. 
+                  Building gameplay systems, multiplayer experiences, and XR applications in Unity.
                 </p>
               </div>
 
@@ -239,7 +245,7 @@
                 <h4 class="h4 service-item-title">HCI Researcher</h4>
 
                 <p class="service-item-text">
-                  I'm a HCI researcher with some publications in XR and digital media.
+                  Researching human-computer interaction, XR, and cultural heritage experiences.
                 </p>
               </div>
 
@@ -252,10 +258,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Front-end Developer</h4>
+                <h4 class="h4 service-item-title">Software Developer</h4>
 
                 <p class="service-item-text">
-                  I'm a front-end software engineer with a full year working experience.
+                  Developing web interfaces and tools that support production workflows.
                 </p>
               </div>
 
@@ -345,7 +351,7 @@
                 </figure>
               </a>
             
-              <h3 class="project-title">Capybara vs. Granny: An Multiplayer Party Game</h3>
+              <h3 class="project-title">Capybara vs. Granny: A Multiplayer Party Game</h3>
               <p class="project-category">Game, ETC</p>
             </li>
 
@@ -576,368 +582,95 @@
       -->
 
       <article class="resume" data-page="resume">
-
         <header>
           <h2 class="h2 article-title">Resume
-            <a href="./KX_Shuai_Resume.pdf" download="KX_Shuai_Resume.pdf" class="tag-box large">
+            <a href="./KX_Shuai_Resume_CN.pdf" download="KX_Shuai_Resume_CN.pdf" class="tag-box large resume-download" aria-label="Download Chinese resume PDF" title="Download Chinese resume PDF">
               <ion-icon name="cloud-download-outline"></ion-icon>
+              <span>Chinese PDF</span>
             </a>
           </h2>
         </header>
-        
+
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
           <ol class="timeline-list">
-
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Carnegie Mellon University (CMU)</h4>
-
-              <span>2025 - 2027</span>
-
-              <p class="timeline-text">
-                Master of Entertainment Technology (ETC)
-              </p>
-
+              <span>Aug 2025 – May 2027</span>
+              <p class="timeline-text">Master of Entertainment Technology; coursework in Computer Graphics and Computer Systems.</p>
             </li>
-
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Xi'an Jiaotong-Liverpool University (XJTLU)</h4>
-
-              <span>2020 - 2025</span>
-
-              <p class="timeline-text">
-                Bachelor of Engineering (Computer Science and Technology) 
-              </p>
-
+              <span>Sep 2020 – Jul 2025</span>
+              <p class="timeline-text">BEng in Computer Science and Technology. Three years as a research assistant at HER Lab; four HCI papers published and three under review.</p>
             </li>
-
           </ol>
-
         </section>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Publications</h3>
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="construct-outline"></ion-icon></div><h3 class="h3">Skills</h3></div>
+          <div class="resume-skills">
+            <p class="timeline-text"><strong>Programming:</strong> C#, C++, Lua, Python, JavaScript</p>
+            <p class="timeline-text"><strong>Game &amp; XR:</strong> Unity, Unreal, Unity Netcode, OpenXR, PolySpatial, visionOS</p>
+            <p class="timeline-text"><strong>Engineering &amp; tools:</strong> Git, Perforce, .NET Framework, Blazor, MCP, Claude Code, Figma</p>
           </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              
-              <h4>
-                <a href="https://doi.org/10.1145/3544549.3583837" class="h4 timeline-item-title" target="_blank">HeritageSite AR: An Exploration Game for Quality Education and Sustainable Cultural Heritage</a>
-              </h4>
-
-              <span>Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23).</span>
-              <span>2022 - 2023</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10506895" class="h4 timeline-item-title" target="_blank">Effects of Object Complexity in Occlusion, Structure, and Texture on 3D Virtual Object Observation in Virtual Reality</a>
-              </h4>
-              <span>2023 Asia Conference on Cognitive Engineering and Intelligent Interaction (CEII).</span>
-              <span>2022 - 2023</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4>
-                <a href="https://dl.acm.org/doi/10.1145/3700881" class="h4 timeline-item-title" target="_blank">HeritageSite AR: Design and Evaluation of a Mobile Augmented Reality Exploration Game for a Chinese Heritage Site</a>
-              </h4>
-
-              <span>Journal on Computing and Cultural Heritage Vol. 37, No. 4, Article 111. Publication date: August 2024.</span>
-              <span>2022 - 2024</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4>
-                <a href="https://pubs.acs.org/doi/10.1021/acsami.5c00565" class="h4 timeline-item-title" target="_blank">
-                  Freestanding Transparent Organic-Inorganic Mesh E-Tattoo for Breathable Bioelectrical Membrane with Enhanced Capillary-driven Adhesion
-                </a>
-              </h4>
-              <h4 class="h4 timeline-item-title">
-
-              <span>ACS Applied Materials & Interfaces journal.</span>
-              <span>2023 - 2024</span>
-
-            </li>
-
-          </ol>
-
         </section>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Professional Experience</h3>    
-          </div>
-
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div><h3 class="h3">Internships</h3></div>
           <ol class="timeline-list">
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Full Stack Software Engineer – Gap Year Set-up Company Working Experience</h4>
-              <span>Suzhou Lingzhi Information Technology Co., Ltd., China</span>
-              <span>Sep. 2022 - Jun. 2023</span>
-
-              <p class="timeline-text">
-                Reconstructed an XR training program for production line workers and developed XR applications using Unity for HoloLens and VisionPro, 
-                improving operational efficiency with digital twin models. Also contributed to XR-based quality inspection
-              </p>
-
+              <h4 class="h4 timeline-item-title">Game Client Development Intern · Tencent Games, TiMi Studio Group</h4>
+              <span>May 2026 – Aug 2026</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Delivered a new gameplay formation system and adapted the hero display interface for acceptance. Extracted a shared base class for old and new formation systems, kept extension points, and removed redundant logic. Maintained both modules and resolved 26 bugs with design, art, and backend teams.</li>
+                <li>Fixed item navigation, duplicate-name search, and refresh issues in the Unity attribute inspector. Built an MCP interface that lets AI agents read runtime attribute data as structured debugging context.</li>
+                <li>Added project constraints, custom skills, and a refine-change step to an OpenSpec and Agent Harness workflow so requirements could be checked before implementation.</li>
+                <li>Built a specification review workbench for designers using CodeBuddy CLI and Agent SDK, with IOA authentication, issue severity levels, human diff approval, and review reminders. The tool entered team trial use.</li>
+              </ul>
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Intern – Industry 4.0 Software Development Engineer</h4>
-              <span>Bosch Automotive Products Co., Ltd., China</span>
-              <span>Apr. 2024 - Aug. 2024</span>
-              
-              <p class="timeline-text">
-                Took part in the transition from a WPF-based system to a Blazor WebAssembly web platform, improving user experience and performance. 
-                Contributed to the front-end of a data analysis tool, utilizing Bootstrap and Plotly for responsive design and dynamic data visualization.
-              </p>
-
+              <h4 class="h4 timeline-item-title">Software Development Intern · Bosch (China) Investment Ltd.</h4>
+              <span>Apr 2024 – Aug 2024</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Redesigned and developed gesture interaction for production-line training in AR, iterating with internal stakeholders; internal customer satisfaction rose 20%.</li>
+                <li>Rebuilt a warehouse navigation app in Unity and migrated it to Apple Vision Pro. Integrated ERP inventory data with the physical environment to locate goods in real space.</li>
+              </ul>
             </li>
-
           </ol>
-
         </section>
 
         <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Project Experience</h3>
-          </div>
-
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="game-controller-outline"></ion-icon></div><h3 class="h3">Games &amp; Projects</h3></div>
           <ol class="timeline-list">
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Digital Touch</h4>
-
-              <span>Interaction Designer & Programmer</span>
-              <span>July 2025 – Aug 2025</span>
-
-              <p class="timeline-text">
-                Architected and developed a multi-user colocation system for visionOS. Enable users to seamlessly invite others into a shared virtual space for collaborative interaction.
-                Authored a suite of custom visual effects with Unity's VFX Graph, elevating the visual appeal and interactive feedbacks.
-              </p>
-
+              <h4 class="h4 timeline-item-title">Capybara vs. Granny · Local Multiplayer Party Game</h4>
+              <span>Nov 2025 – Dec 2025</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Implemented health, hit detection, death, respawn, and environmental destruction in Unity for local multiplayer combat.</li>
+                <li>Built a capybara stacking mechanic by coordinating player state, physics constraints, and input timing.</li>
+                <li>Completed seven prototype iterations across six playtest rounds in a three-week development cycle, refining edge cases before delivery.</li>
+              </ul>
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">See Feel</h4>
-
-              <span>Interaction Designer & Programmer</span>
-              <span>Mar 2025 – Jun 2025</span>
-
-              <p class="timeline-text">
-                Led the development of a multiplayer networked XR interaction prototype for VR museums, innovatively enabling visitors to interact and provide real-time feedback using gaze and emojis. 
-                Research findings have been submitted to IEEE Transactions on Visualization and Computer Graphics (TVCG).
-              </p>
-
+              <h4 class="h4 timeline-item-title">Digital Touch · Colocated visionOS Collaboration</h4>
+              <span>Jul 2025 – Aug 2025</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Helped build a Unity transport plugin using Apple Multipeer Connectivity for local peer-to-peer communication without an external Wi-Fi access point or cellular network.</li>
+                <li>Connected the transport to Unity Netcode for real-time content synchronization and spatial alignment across colocated visionOS devices. Submitted to Augmented Humans.</li>
+              </ul>
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Extensible Asymmetric Interaction System – Capstone project</h4>
-
-              <span>System Designer, Programmer</span>
-              <span>Aug 2024 – Jun 2025</span>
-
-              <p class="timeline-text">
-                Independently developed an asymmetric interaction system that enables users on different devices (VR, PC, and Mobile) to communicate and collaborate within one virtual environment.
-                Designed and implemented a network platform based on NetCode, allowing simultaneous connectivity from devices across multiple platforms (VR, PC, Android).
-                Published a template Unity project, including pre-configured Unity assets, detailed technical documentation, and beginner-friendly guides.
-              </p>
-
+              <h4 class="h4 timeline-item-title">HeritageSite AR · Suzhou Twin Pagodas Exploration Game</h4>
+              <span>Nov 2022 – Dec 2022</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Interviewed four heritage specialists and collected 174 visitor questionnaires to identify needs in interpretation, route guidance, and visit recall.</li>
+                <li>Implemented story-driven puzzles, NPC dialogue, and interactive 3D ruins in Unity; the game was deployed on site.</li>
+                <li>User evaluation recorded 56% appreciation for the interactive experience and 42% knowledge acquisition. Results appeared at CHI 2023 and in JOCCH.</li>
+              </ul>
             </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Enhancing Small/Moving Target Selection in VR using SSVEP-based BCI</h4>
-
-              <span>VR Developer & MATLAB Developer</span>
-              <span>Nov 2024 - Present</span>
-
-              <p class="timeline-text">
-                Assisted in research to evaluate whether an SSVEP-based BCI improves the accuracy of selecting small targets in VR environments when combined with eye-tracking.
-                Applied Meta's eye-tracking toolkit in combination with the real-time BCI signal toolkit in MATLAB to create a testing prototype in Meta Quest Pro.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Intelligent Medical Orthopedic Splint</h4>
-
-              <span>Sponsored by Suzhou Hospital of Traditional Chinese Medicine.</span>
-              <span>Project Lead & IoT Developer</span>
-              <span>Mar 2024 - Jun 2024</span>
-
-              <p class="timeline-text">
-                Led the development of a smart orthopedic splint with IoT sensors to aid in post-fracture rehabilitation, 
-                recommended for the China National University Students' Opt-Sci-Tech Competition.
-                Developed IoT modules and implemented 12-page front-end interfaces for the mobile application.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Electrooculogram (EOG) and VR</h4>
-
-              <span>Collaborated with Institute of Semiconductors CAS and Soochow University's Nano Institute.</span>
-              <span>VR Developer & MATLAB Developer</span>
-              <span>Oct 2023 - Jan 2024</span>
-
-              <p class="timeline-text">
-                Developed a novel electronic tattoo for enhanced VR control through precise electrooculogram (EOG) signal integration, accepted by ACS Applied Materials & Interfaces journal.
-                Built a Unity-based VR prototype and facilitated real-time BCI signal transmission using Socket programming and MATLAB for EOG signal processing.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">AR Computer Assembly Tutorial</h4>
-
-              <span>Project Lead & Interaction Designer & Programmer</span>
-              <span>Jun 2023 - Aug 2023</span>
-
-              <p class="timeline-text">
-                Spearheaded the development of an AR mobile application that assists layman in assembling a personal computer independently, won a third prize in the China Virtual Reality Competition (CCVR2023).
-                Designed the software architecture and implemented the core mechanics of the application.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Manipulating and Observing Virtual Objects in VR</h4>
-
-              <span>Sole Author & Developer</span>
-              <span>Aug 2022 - Jun 2023</span>
-
-              <p class="timeline-text">
-                Independently completed the research evaluating the VR observation in virtual worlds from multiple dimensions, 
-                ranked 6/140 in XJTLU's Summer Undergraduate Research Project Competition, and published in the CEII2023.
-                Implemented two classic VR interaction methods and built a virtual museum environment for testing.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">AR Exploration Game for Museums and Cultural Heritage</h4>
-
-              <span>Main Program Developer & Game Mechanism Designer</span>
-              <span>Nov 2022 - Dec 2022</span>
-
-              <p class="timeline-text">
-                Assisted in designing an educational AR mobile game to enhance the visitor experience in museums and cultural heritage sites, published in the CHI 2023 & JOCCH.
-                Contributed to the design of the game's core mechanics and completed 70% of the code development ensuring robust functionality.
-              </p>
-
-            </li>
-
           </ol>
-
         </section>
-
-        <!-- <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section> -->
-
       </article>
 
     </div>
@@ -948,6 +681,7 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/i18n.js"></script>
 
   <!--
     - ionicon link

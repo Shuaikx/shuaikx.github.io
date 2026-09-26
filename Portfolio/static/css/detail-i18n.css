@@ -1,0 +1,31 @@
+.detail-language-switch {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background: #242426;
+  box-shadow: 0 8px 24px #0004;
+  color: #aaa;
+  font: 600 13px/1.4 Arial, sans-serif;
+}
+.detail-language-switch button {
+  border: 0;
+  background: transparent;
+  color: #ddd;
+  font: inherit;
+  cursor: pointer;
+  padding: 3px;
+}
+.detail-language-switch button.active,
+.detail-language-switch button:hover,
+.detail-language-switch button:focus-visible { color: #ffe9a3; }
+@media (max-width: 600px) {
+  body { padding-top: 40px; }
+  .detail-language-switch { top: 8px; right: 8px; }
+}

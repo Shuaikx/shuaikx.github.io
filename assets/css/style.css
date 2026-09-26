@@ -579,6 +579,44 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+.language-item { margin-left: 4px; }
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  background: var(--eerie-black-2);
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  white-space: nowrap;
+}
+
+.language-option {
+  color: var(--light-gray);
+  font-size: inherit;
+  font-weight: var(--fw-500);
+  padding: 5px 2px;
+  transition: color var(--transition-1);
+}
+
+.language-option:hover,
+.language-option:focus-visible,
+.language-option.active { color: var(--orange-yellow-crayola); }
+
+.resume-bullets { padding-left: 18px; }
+.resume-bullets li { list-style: disc; margin-top: 7px; }
+.resume-skills .timeline-text { margin-bottom: 8px; }
+.resume-skills strong { color: var(--white-2); font-weight: var(--fw-500); }
+
+@media (max-width: 579px) {
+  .navbar-list { flex-wrap: nowrap; }
+  .navbar-link { padding: 16px 7px; }
+  .language-switch { gap: 3px; padding: 3px 6px; }
+}
+
 
 
 
