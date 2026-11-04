@@ -149,7 +149,10 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html {
+  font-family: var(--ff-poppins);
+  scrollbar-gutter: stable;
+}
 
 body { background: var(--smoky-black); }
 
@@ -608,8 +611,6 @@ main {
 
 .resume-bullets { padding-left: 18px; }
 .resume-bullets li { list-style: disc; margin-top: 7px; }
-.resume-skills .timeline-text { margin-bottom: 8px; }
-.resume-skills strong { color: var(--white-2); font-weight: var(--fw-500); }
 
 @media (max-width: 579px) {
   .navbar-list { flex-wrap: nowrap; }
@@ -638,55 +639,18 @@ main {
 
 
 
-/**
- * #service 
- */
-
-.service { 
-  margin-bottom: 30px; 
-  padding-top: 30px;
-  border-top: 1px solid var(--jet);
-}
-
-.service-title { margin-bottom: 20px; }
-
-.service-list {
+.profile-tags {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0 24px;
 }
 
-.service-item {
-  position: relative;
-  background: var(--border-gradient-onyx);
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: var(--shadow-2);
-  z-index: 1;
-}
-
-.service-item::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
-}
-
-.service-icon-box { margin-bottom: 10px; }
-
-.service-icon-box img { margin: auto; }
-
-.service-content-box { text-align: center; }
-
-.service-item-title { margin-bottom: 7px; }
-
-.service-item-text {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-3);
-  line-height: 1.6;
+.profile-tags > .tag-box {
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  line-height: 1.4;
+  text-align: center;
 }
 
 
@@ -714,6 +678,21 @@ main {
 
 .article-title { margin-bottom: 30px; }
 
+.resume-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin-bottom: 30px;
+}
+
+.resume-header .article-title { margin-bottom: 0; }
+
+.resume-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
 /**
  * education and experience 
@@ -817,43 +796,11 @@ main {
   line-height: 1.6;
 }
 
-
-/**
- * skills 
- */
-
-.skills-section {
-  padding-top: 10px;
+.publication-venue-link {
+  display: inline;
+  color: inherit;
+  text-decoration: underline;
 }
-
-.skills-subtitle {
-  color: var(--white-2);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.skills-category {
-  margin-top: 10px;
-}
-
-.skills-category-title {
-  color: var(--white-2);
-  margin-bottom: 12px;
-  font-weight: var(--fw-500);
-}
-
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
-
-.skills-tags .tag-box {
-  margin-bottom: 8px;
-}
-
-
 
 
 /*-----------------------------------*\
@@ -1046,6 +993,47 @@ main {
   font-weight: var(--fw-300);
 }
 
+/* Styles for the future project preview dialog in index.html. */
+.project-dialog {
+  width: min(36rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: clamp(22px, 5vw, 36px);
+  background: var(--bg-gradient-jet);
+  color: var(--white-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-3);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-dialog[open] {
+    animation: project-dialog-open var(--transition-1);
+  }
+}
+
+@keyframes project-dialog-open {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.project-dialog::backdrop {
+  background: hsla(240, 5%, 9%, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+html:has(.project-dialog[open]) { overflow: hidden; }
+
+.project-dialog .article-title {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 12px;
+  text-transform: none;
+}
+
 
 .social-links {
   display: flex;
@@ -1232,23 +1220,6 @@ main {
 
   .about-text { margin-bottom: 30px; }
 
-  /* service */
-
-  .service-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 30px;
-  }
-
-  .service-icon-box {
-    margin-bottom: 0;
-    margin-top: 5px;
-  }
-
-  .service-content-box { text-align: left; }
-
   /* testimonials */
 
   .testimonials-title { margin-bottom: 25px; }
@@ -1397,6 +1368,11 @@ main {
    * ABOUT
    */
 
+  .profile-tags {
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+  }
+
   /* testimonials modal */
 
   .testimonials-modal {
@@ -1535,13 +1511,6 @@ main {
   /**
    * ABOUT
    */
-
-  /* service */
-
-  .service-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px;
-  }
 
   /* testimonials */
 

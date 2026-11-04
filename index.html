@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KX-Shuai-Web</title>
+  <title>KX Shuai</title>
   <meta name="description" content="KX Shuai's game client development, XR projects, and resume.">
 
   <link rel="shortcut icon" href="./assets/images/loopy.ico" type="image/x-icon">
@@ -192,131 +192,18 @@
         </section>
 
 
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What I do</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-pc.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Graduate Student at CMU</h4>
-
-                <p class="service-item-text">
-                  Pursuing a master's degree in Entertainment Technology at Carnegie Mellon University.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-xr.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Unity Developer </h4>
-
-                <p class="service-item-text">
-                  Building gameplay systems, multiplayer experiences, and XR applications in Unity.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">HCI Researcher</h4>
-
-                <p class="service-item-text">
-                  Researching human-computer interaction, XR, and cultural heritage experiences.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Software Developer</h4>
-
-                <p class="service-item-text">
-                  Developing web interfaces and tools that support production workflows.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-          <!-- Skills Section -->
-          <div class="skills-section">
-            <div class="skills-category">
-              <div class="skills-tags">
-                <div class="tag-box">
-                  <span>C#</span>
-                </div>
-                <div class="tag-box">
-                  <span>C++</span>
-                </div>
-                <div class="tag-box">
-                  <span>JavaScript</span>
-                </div>
-                <div class="tag-box">
-                  <span>Unity</span>
-                </div>
-                <div class="tag-box">
-                  <span>VR/AR</span>
-                </div>
-                <!-- <div class="tag-box">
-                  <span>visionOS</span>
-                </div> -->
-                <div class="tag-box">
-                  <span>Perforce</span>
-                </div>
-                <div class="tag-box">
-                  <span>.Net</span>
-                </div>
-                <div class="tag-box">
-                  <span>Blazor</span>
-                </div>
-                <div class="tag-box">
-                  <span>Figma</span>
-                </div>
-                <div class="tag-box">
-                  <span>MATLAB</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
+        <ul class="profile-tags" role="list">
+          <li class="tag-box">Game Client Developer</li>
+          <li class="tag-box">CMU Student</li>
+          <li class="tag-box">HCI Researcher</li>
+          <li class="tag-box">AI Agent Developer</li>
+        </ul>
 
         <!--
         - #Projects
         -->
         <section class="projects">
-          <h3 class="h3 projects-title">Portfolio</h3>
+          <h3 class="h3 projects-title">Projects</h3>
 
           <!-- <div class="filter-select-box">
 
@@ -342,33 +229,31 @@
 
           <ul class="project-list">
             <li class="project-item  active" data-filter-item data-category="Game">
-              <a href="https://andypang1010.itch.io/capybara-vs-granny" target="_blank">
+              <a href="https://andypang1010.itch.io/capybara-vs-granny" target="_blank" aria-labelledby="project-capybara" data-project-dialog="capybara-vs-granny">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
                   <img src="./Portfolio/ETC-Capybara_vs_Granny/Capybara_vs_Granny.jpg" alt="finance" loading="lazy">
                 </figure>
+                <h3 class="project-title" id="project-capybara">Capybara vs. Granny: A Multiplayer Party Game</h3>
+                <p class="project-category">Game, ETC</p>
               </a>
-            
-              <h3 class="project-title">Capybara vs. Granny: A Multiplayer Party Game</h3>
-              <p class="project-category">Game, ETC</p>
             </li>
 
             <!-- ------------------------------------------------------------------------------------------------------------- -->
              
             <li class="project-item  active" data-filter-item data-category="XR">
-              <a href="./Portfolio/CHI-Shuangta/Portfolio-Shuangta.pdf" target="_blank">
+              <a href="./Portfolio/CHI-Shuangta/Portfolio-Shuangta.pdf" target="_blank" aria-labelledby="project-heritage" data-project-dialog="heritage-site-ar">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
                   <img src="./Portfolio/CHI-Shuangta/Page-Shuangta.png" alt="finance" loading="lazy">
                 </figure>
+                <h3 class="project-title" id="project-heritage">AR Exploration Game for Cultural Heritage</h3>
+                <p class="project-category">XR, Game, Research</p>
               </a>
-            
-              <h3 class="project-title">AR Exploration Game for Cultural Heritage</h3>
-              <p class="project-category">XR, Game, Research</p>
             
               <div class="social-links">
                 <a href="./Portfolio/CHI-Shuangta/Portfolio-Shuangta.pdf" class="social-link" target="_blank">
@@ -390,19 +275,16 @@
             <!-- ------------------------------------------------------------------------------------------------------------- -->
              
             <li class="project-item  active" data-filter-item data-category="XR">
-              <a href="./Portfolio/XR-Observation/Portfolio-XRObservation.pdf" target="_blank">
+              <a href="./Portfolio/XR-Observation/Portfolio-XRObservation.pdf" target="_blank" aria-labelledby="project-observation" data-project-dialog="xr-observation">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
                   <img src=".//Portfolio/XR-Observation/Page-XRObservation.png" alt="finance" loading="lazy">
                 </figure>
+                <h3 class="project-title" id="project-observation">Research in Virtual Object's XR Observation</h3>
+                <p class="project-category">XR, Research</p>
               </a>
- 
-            <!-- ------------------------------------------------------------------------------------------------------------- -->
-                        
-              <h3 class="project-title">Research in Virtual Object's XR Observation</h3>
-              <p class="project-category">XR, Research</p>
             
               <div class="social-links">
                 <a href="./Portfolio/XR-Observation/Portfolio-XRObservation.pdf" class="social-link" target="_blank">
@@ -418,7 +300,7 @@
             <!-- ------------------------------------------------------------------------------------------------------------- -->
              
             <li class="project-item  active" data-filter-item data-category="XR">
-              <a href="https://projects.etc.cmu.edu/soulos" target="_blank">
+              <a href="https://projects.etc.cmu.edu/soulos" target="_blank" aria-labelledby="project-soulos" data-project-dialog="soulos">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -428,7 +310,7 @@
                   <img src="./Portfolio/ETC-SoulOS/SoulOS.gif" alt="summary" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">An immersive experience with a physical robot (Unitree G1) & AR+VR</h3>
+                <h3 class="project-title" id="project-soulos">An immersive experience with a physical robot (Unitree G1) & AR+VR</h3>
 
                 <p class="project-category">XR, Robotics, ETC</p>
 
@@ -438,7 +320,7 @@
             <!-- ------------------------------------------------------------------------------------------------------------- -->
 
             <li class="project-item  active" data-filter-item data-category="XR">
-              <a href="/Portfolio/ETC-CosmoEcho/index.html" target="_blank">
+              <a href="/Portfolio/ETC-CosmoEcho/index.html" target="_blank" aria-labelledby="project-cosmos-echo" data-project-dialog="cosmos-echo">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -448,22 +330,22 @@
                   <img src="./Portfolio/ETC-CosmoEcho/CosmosEcho.png" alt="summary" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Cosmos Echo: a 5-minute immersive VR narrative experience.</h3>
+                <h3 class="project-title" id="project-cosmos-echo">Cosmos Echo: a 5-minute immersive VR narrative experience.</h3>
 
                 <p class="project-category">XR, ETC</p>
+              </a>
 
-                <div class="social-links">
+              <div class="social-links">
                 <a href="https://cosmosecho.itch.io/cosmos-echo" class="social-link" target="_blank">
                   <ion-icon name="link-outline"></ion-icon>
                 </a>
               </div>
-              </a>
             </li>
 
             <!-- ------------------------------------------------------------------------------------------------------------- -->
              
             <li class="project-item  active" data-filter-item data-category="XR">
-              <a href="https://gothamz.itch.io/crawlgatory" target="_blank">
+              <a href="https://gothamz.itch.io/crawlgatory" target="_blank" aria-labelledby="project-crawlgatory" data-project-dialog="crawlgatory">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -473,7 +355,7 @@
                   <img src="./Portfolio/GGJ-Crawlgatory/Crawlgatory.png" alt="summary" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Crawlgatory: a game developed in 30 hours.</h3>
+                <h3 class="project-title" id="project-crawlgatory">Crawlgatory: a game developed in 30 hours.</h3>
 
                 <p class="project-category">Global Game Jam, ETC</p>
               </a>
@@ -482,7 +364,7 @@
             <!-- ------------------------------------------------------------------------------------------------------------- -->
                         
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="/Portfolio/LeadQ/index.html" target="_blank">
+              <a href="/Portfolio/LeadQ/index.html" target="_blank" aria-labelledby="project-leadq" data-project-dialog="leadq">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -492,7 +374,7 @@
                   <img src="./Portfolio/LeadQ/Page-LeadQ.png" alt="brawlhalla" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">LeadQ Quality Analysis Tool</h3>
+                <h3 class="project-title" id="project-leadq">LeadQ Quality Analysis Tool</h3>
 
                 <p class="project-category">Web, Data Visualization</p>
 
@@ -502,7 +384,7 @@
             <!-- ------------------------------------------------------------------------------------------------------------- -->
              
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="./Portfolio/AR-Assemble/index.html" target="_blank">
+              <a href="./Portfolio/AR-Assemble/index.html" target="_blank" aria-labelledby="project-assembly" data-project-dialog="ar-computer-assembly">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -512,7 +394,7 @@
                   <img src="./Portfolio/AR-Assemble/Page-PCAR.png" alt="dsm." loading="lazy">
                 </figure>
 
-                <h3 class="project-title">AR Computer Assembly Tutorial</h3>
+                <h3 class="project-title" id="project-assembly">AR Computer Assembly Tutorial</h3>
 
                 <p class="project-category">XR, Mobile App, Tutorial</p>
                 <!-- <a href="https://www.youtube.com/watch?time_continue=2&v=tpRG3rJ0DUM&embeds_referring_euri=http%3A%2F%2F127.0.0.1%3A5500%2F&source_ve_path=Mjg2NjY" class="social-link" target="_blank">
@@ -525,7 +407,7 @@
             <!-- ------------------------------------------------------------------------------------------------------------- -->
              
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="./Portfolio/IoT-MedicalSplint/index.html" target="_blank">
+              <a href="./Portfolio/IoT-MedicalSplint/index.html" target="_blank" aria-labelledby="project-splint" data-project-dialog="medical-splint">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -535,7 +417,7 @@
                   <img src="./Portfolio/IoT-MedicalSplint/Page-IoT.png" alt="metaspark" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Intelligent Medical Orthopedic Splint</h3>
+                <h3 class="project-title" id="project-splint">Intelligent Medical Orthopedic Splint</h3>
 
                 <p class="project-category">IoT, Mobile App</p>
 
@@ -546,10 +428,9 @@
               </a>
             </li>
 
-            <!-- ------------------------------------------------------------------------------------------------------------- -->
-             
+            <!-- Temporarily hide the WeChat Mini Program card.
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="./Portfolio/Wechat-mini/index.html" target="_blank">
+              <a href="./Portfolio/Wechat-mini/index.html" target="_blank" aria-labelledby="project-wechat" data-project-dialog="wechat-mini-program">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -559,16 +440,13 @@
                   <img src="./Portfolio/Wechat-mini/Page-Wechat.png" alt="metaspark" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Wechat Mini Program</h3>
+                <h3 class="project-title" id="project-wechat">Wechat Mini Program</h3>
 
                 <p class="project-category">Mobile App</p>
 
-                <!-- <a href="https://www.youtube.com/watch?v=003N2-EqP2Y&embeds_referring_euri=http%3A%2F%2F127.0.0.1%3A5500%2F&source_ve_path=OTY3MTQ" class="social-link" target="_blank">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a> -->
-
               </a>
             </li>
+            -->
 
           </ul>
 
@@ -582,13 +460,18 @@
       -->
 
       <article class="resume" data-page="resume">
-        <header>
-          <h2 class="h2 article-title">Resume
-            <a href="./KX_Shuai_Resume_CN.pdf" download="KX_Shuai_Resume_CN.pdf" class="tag-box large resume-download" aria-label="Download Chinese resume PDF" title="Download Chinese resume PDF">
-              <ion-icon name="cloud-download-outline"></ion-icon>
+        <header class="resume-header">
+          <h2 class="h2 article-title">Resume</h2>
+          <div class="resume-downloads">
+            <a href="./Resumes/KX_Shuai_Resume_EN.pdf" download="KX_Shuai_Resume_EN.pdf" class="tag-box resume-download" aria-label="Download English resume PDF" title="Download English resume PDF">
+              <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon>
+              <span>English PDF</span>
+            </a>
+            <a href="./Resumes/KX_Shuai_Resume_CN.pdf" download="KX_Shuai_Resume_CN.pdf" class="tag-box resume-download" aria-label="Download Chinese resume PDF" title="Download Chinese resume PDF">
+              <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon>
               <span>Chinese PDF</span>
             </a>
-          </h2>
+          </div>
         </header>
 
         <section class="timeline">
@@ -609,11 +492,54 @@
 
         <section class="timeline">
           <div class="title-wrapper"><div class="icon-box"><ion-icon name="construct-outline"></ion-icon></div><h3 class="h3">Skills</h3></div>
-          <div class="resume-skills">
-            <p class="timeline-text"><strong>Programming:</strong> C#, C++, Lua, Python, JavaScript</p>
-            <p class="timeline-text"><strong>Game &amp; XR:</strong> Unity, Unreal, Unity Netcode, OpenXR, PolySpatial, visionOS</p>
-            <p class="timeline-text"><strong>Engineering &amp; tools:</strong> Git, Perforce, .NET Framework, Blazor, MCP, Claude Code, Figma</p>
-          </div>
+          <ul class="timeline-list" role="list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Programming</h4>
+              <p class="timeline-text">C#, C++, Lua, Python, JavaScript</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Game &amp; XR</h4>
+              <p class="timeline-text">Unity, Unreal, Unity Netcode, OpenXR, PolySpatial, visionOS</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Engineering &amp; Tools</h4>
+              <p class="timeline-text">Git, Perforce, .NET Framework, Blazor, MCP, Claude Code, Figma, MATLAB</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="document-text-outline" aria-hidden="true"></ion-icon></div><h3 class="h3">Publications</h3></div>
+          <ol class="timeline-list" role="list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://pubs.acs.org/doi/10.1021/acsami.5c00565">Freestanding Transparent Organic–Inorganic Mesh E-Tattoo for Breathable Bioelectrical Membranes with Enhanced Capillary-Driven Adhesion</a>
+              </h4>
+              <p class="timeline-text">Xiang Li, Junyi Zhang, Bo Shi, Yawen Li, Yanan Wang, <strong><em>Kexiang Shuai</em></strong>, Yue Li, Gege Ming, Tao Song, Weihua Pei, Baoquan Sun</p>
+              <p class="timeline-text"><cite>ACS Applied Materials &amp; Interfaces</cite> (2025).</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://dl.acm.org/doi/10.1145/3700881">HeritageSite AR: Design and Evaluation of a Mobile Augmented Reality Exploration Game for a Chinese Heritage Site</a>
+              </h4>
+              <p class="timeline-text">Ningning Xu, Yue Li, Jiachen Liang, <strong><em>Kexiang Shuai</em></strong>, Yuwen Li, Jiaqi Yan, Cheng Zhang, Yiping Dong</p>
+              <p class="timeline-text"><cite>ACM Journal on Computing and Cultural Heritage</cite>, Vol. 17, No. 4, Article 67 (December 2024).</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10506895">Effects of Object Complexity in Occlusion, Structure, and Texture on 3D Virtual Object Observation in Virtual Reality</a>
+              </h4>
+              <p class="timeline-text"><strong><em>Kexiang Shuai</em></strong>, Yue Li, Hai-Ning Liang</p>
+              <p class="timeline-text"><cite><a class="publication-venue-link" href="https://ieeexplore.ieee.org/xpl/conhome/10506842/proceeding">2023 Asia Conference on Cognitive Engineering and Intelligent Interaction (CEII)</a></cite>.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://doi.org/10.1145/3544549.3583837">HeritageSite AR: An Exploration Game for Quality Education and Sustainable Cultural Heritage</a>
+              </h4>
+              <p class="timeline-text">Ningning Xu, Jiachen Liang, <strong><em>Kexiang Shuai</em></strong>, Yuwen Li, and Jiaqi Yan</p>
+              <p class="timeline-text">In <cite>Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)</cite>.</p>
+            </li>
+          </ol>
         </section>
 
         <section class="timeline">
@@ -621,7 +547,7 @@
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Game Client Development Intern · Tencent Games, TiMi Studio Group</h4>
-              <span>May 2026 – Aug 2026</span>
+              <span>May 2026 - Aug 2026</span>
               <ul class="resume-bullets timeline-text">
                 <li>Delivered a new gameplay formation system and adapted the hero display interface for acceptance. Extracted a shared base class for old and new formation systems, kept extension points, and removed redundant logic. Maintained both modules and resolved 26 bugs with design, art, and backend teams.</li>
                 <li>Fixed item navigation, duplicate-name search, and refresh issues in the Unity attribute inspector. Built an MCP interface that lets AI agents read runtime attribute data as structured debugging context.</li>
@@ -631,21 +557,29 @@
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Software Development Intern · Bosch (China) Investment Ltd.</h4>
-              <span>Apr 2024 – Aug 2024</span>
+              <span>Apr 2024 - Aug 2024</span>
               <ul class="resume-bullets timeline-text">
                 <li>Redesigned and developed gesture interaction for production-line training in AR, iterating with internal stakeholders; internal customer satisfaction rose 20%.</li>
                 <li>Rebuilt a warehouse navigation app in Unity and migrated it to Apple Vision Pro. Integrated ERP inventory data with the physical environment to locate goods in real space.</li>
+              </ul>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full-Stack Software Development Intern · LeadQ</h4>
+              <span>Sep 2022 - Jun 2023</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Independently migrated a legacy WPF management system to the web, using Blazor and .NET to separate the front end from the back end.</li>
+                <li>Helped build the core prototype of a data analysis platform benchmarked against Minitab. Integrated data visualization components with back-end statistical analysis algorithms, refined the platform across three versions, and fixed 72 bugs in core functionality. This work helped secure trials with two manufacturing companies.</li>
               </ul>
             </li>
           </ol>
         </section>
 
         <section class="timeline">
-          <div class="title-wrapper"><div class="icon-box"><ion-icon name="game-controller-outline"></ion-icon></div><h3 class="h3">Games &amp; Projects</h3></div>
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="game-controller-outline"></ion-icon></div><h3 class="h3">Projects</h3></div>
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Capybara vs. Granny · Local Multiplayer Party Game</h4>
-              <span>Nov 2025 – Dec 2025</span>
+              <span>Nov 2025 - Dec 2025</span>
               <ul class="resume-bullets timeline-text">
                 <li>Implemented health, hit detection, death, respawn, and environmental destruction in Unity for local multiplayer combat.</li>
                 <li>Built a capybara stacking mechanic by coordinating player state, physics constraints, and input timing.</li>
@@ -653,8 +587,16 @@
               </ul>
             </li>
             <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">SoulOS · Physical Robot and VR Puzzle Experience (CMU Course Project)</h4>
+              <span>Jan 2026 - Apr 2026</span>
+              <ul class="resume-bullets timeline-text">
+                <li>Handled all Unity development. Received and processed joint data from the physical Unitree robot over UDP to reproduce its motion in a digital twin, which supported VR puzzles tied to the narrative.</li>
+                <li>Built an asset integration tool that lets artists attach a script and assign part IDs to sync new models into the development scene and automatically bind or replace the corresponding parts.</li>
+              </ul>
+            </li>
+            <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Digital Touch · Colocated visionOS Collaboration</h4>
-              <span>Jul 2025 – Aug 2025</span>
+              <span>Jul 2025 - Aug 2025</span>
               <ul class="resume-bullets timeline-text">
                 <li>Helped build a Unity transport plugin using Apple Multipeer Connectivity for local peer-to-peer communication without an external Wi-Fi access point or cellular network.</li>
                 <li>Connected the transport to Unity Netcode for real-time content synchronization and spatial alignment across colocated visionOS devices. Submitted to Augmented Humans.</li>
@@ -662,7 +604,7 @@
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">HeritageSite AR · Suzhou Twin Pagodas Exploration Game</h4>
-              <span>Nov 2022 – Dec 2022</span>
+              <span>Nov 2022 - Dec 2022</span>
               <ul class="resume-bullets timeline-text">
                 <li>Interviewed four heritage specialists and collected 174 visitor questionnaires to identify needs in interpretation, route guidance, and visit recall.</li>
                 <li>Implemented story-driven puzzles, NPC dialogue, and interactive 3D ruins in Unity; the game was deployed on site.</li>
@@ -673,16 +615,16 @@
         </section>
 
         <section class="timeline">
-          <div class="title-wrapper"><div class="icon-box"><ion-icon name="layers-outline"></ion-icon></div><h3 class="h3">Additional Projects &amp; Research</h3></div>
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="layers-outline"></ion-icon></div><h3 class="h3">Other Projects</h3></div>
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">See Feel · Multiplayer XR Museum Interaction</h4>
-              <span>Mar 2025 – Jun 2025</span>
+              <span>Mar 2025 - Jun 2025</span>
               <p class="timeline-text">Developed a networked multiplayer XR prototype for VR museums, allowing visitors to interact and share real-time feedback through gaze and emojis. The research was submitted to IEEE TVCG.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Extensible Asymmetric Interaction System · Capstone</h4>
-              <span>Aug 2024 – Jun 2025</span>
+              <span>Aug 2024 - Jun 2025</span>
               <p class="timeline-text">Built a cross-device collaboration system for VR, PC, and Android using Unity Netcode. Published a Unity project template with configured assets, technical documentation, and beginner guides.</p>
             </li>
             <li class="timeline-item">
@@ -692,44 +634,40 @@
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Intelligent Medical Orthopedic Splint</h4>
-              <span>Mar 2024 – Jun 2024</span>
+              <span>Mar 2024 - Jun 2024</span>
               <p class="timeline-text">Led an IoT-enabled splint project for fracture rehabilitation, developed sensor modules and a 12-page mobile interface, and received a recommendation for the China National University Students' Opt-Sci-Tech Competition.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Electrooculogram (EOG) and VR</h4>
-              <span>Oct 2023 – Jan 2024</span>
+              <span>Oct 2023 - Jan 2024</span>
               <p class="timeline-text">Built a Unity VR prototype integrating electronic-tattoo EOG signals, with socket-based transmission and MATLAB signal processing. The collaborative research was published in ACS Applied Materials &amp; Interfaces.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">AR Computer Assembly Tutorial</h4>
-              <span>Jun 2023 – Aug 2023</span>
+              <span>Jun 2023 - Aug 2023</span>
               <p class="timeline-text">Led the architecture and core interactions of an AR mobile guide that helps users assemble a PC. The project won third prize in the 2023 China Virtual Reality Competition.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Manipulating and Observing Virtual Objects in VR</h4>
-              <span>Aug 2022 – Jun 2023</span>
+              <span>Aug 2022 - Jun 2023</span>
               <p class="timeline-text">Independently studied how object characteristics affect observation in VR, implemented two interaction methods, and built a virtual museum for evaluation. The project ranked 6th of 140 at XJTLU's undergraduate research competition and was published at CEII 2023.</p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">SoulOS · Robot, AR &amp; VR Experience</h4>
-              <p class="timeline-text">An immersive experience combining a Unitree G1 physical robot with AR and VR, created at CMU's Entertainment Technology Center.</p>
-            </li>
-            <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Cosmos Echo · Immersive VR Narrative</h4>
+              <span>Oct 2025 - Oct 2025</span>
               <p class="timeline-text">Worked as a Unity programmer on a five-minute VR story about an astronaut recalling his family in the final moments of a space voyage.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Crawlgatory · Global Game Jam</h4>
+              <span>Jan 2026 - Jan 2026</span>
               <p class="timeline-text">Contributed to a game developed in 30 hours during Global Game Jam.</p>
             </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">LeadQ · Quality Analysis Tool</h4>
-              <p class="timeline-text">A quality analysis tool covering charts, hypothesis testing, statistical process control, gauge system analysis, regression, and sample-size calculations.</p>
-            </li>
+            <!-- Temporarily hide the WeChat Mini Program entry.
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">WeChat Home-Service Mini Program</h4>
               <p class="timeline-text">A home-service booking platform with a mobile interface for customers and a web dashboard for merchants to manage services and orders.</p>
             </li>
+            -->
           </ol>
         </section>
       </article>
@@ -737,6 +675,17 @@
     </div>
 
   </main>
+
+  <!--
+    Future project preview dialog. Project cards currently open their original links.
+    To enable previews, uncomment this template and the preview handlers in
+    assets/js/script.js, then add aria-haspopup="dialog" to links with data-project-dialog.
+    Each data-project-dialog value points to a JSON file in project-dialogs/.
+
+    <dialog class="project-dialog" aria-labelledby="project-dialog-title">
+      <h2 class="h3 article-title" id="project-dialog-title"></h2>
+    </dialog>
+  -->
 
   <!--
     - custom js link

@@ -55,6 +55,56 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 
 
+/*
+ * Future project preview. Enable these handlers with the dialog template in
+ * index.html when project previews are ready. Cards currently follow their href.
+
+const projectList = document.querySelector(".project-list");
+const projectDialog = document.querySelector(".project-dialog");
+const projectDialogTitle = document.querySelector("#project-dialog-title");
+let projectDialogRequest = 0;
+
+projectList.addEventListener("click", async (event) => {
+  const card = event.target.closest(".project-item");
+  if (!card || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+  const cardLink = card.querySelector("a[data-project-dialog]");
+  const clickedLink = event.target.closest("a");
+  if (!cardLink || (clickedLink && clickedLink !== cardLink)) return;
+
+  event.preventDefault();
+  const request = ++projectDialogRequest;
+  projectDialogTitle.textContent = card.querySelector(".project-title").textContent;
+  cardLink.focus({ preventScroll: true });
+  projectDialog.showModal();
+
+  try {
+    const response = await fetch(`./project-dialogs/${cardLink.dataset.projectDialog}.json`);
+    if (!response.ok) return;
+
+    const data = await response.json();
+    if (request !== projectDialogRequest || !projectDialog.open) return;
+
+    const language = document.documentElement.lang === "zh-CN" ? "zh" : "en";
+    const title = data?.title?.[language];
+    if (typeof title === "string" && title.trim()) projectDialogTitle.textContent = title;
+  } catch {
+    // Keep the card title if the project content is unavailable.
+  }
+});
+
+projectDialog.addEventListener("click", (event) => {
+  if (event.target !== projectDialog) return;
+
+  const { left, right, top, bottom } = projectDialog.getBoundingClientRect();
+  if (event.clientX < left || event.clientX >= right || event.clientY < top || event.clientY >= bottom) {
+    projectDialog.close();
+  }
+});
+*/
+
+
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
